@@ -15,4 +15,4 @@ Contains inputs files required to run the ATSUI method. Example of the input fil
 All files must be extracted in the 'inputs' folder.
 
 'src' folder:
-Contains all matlab functions both newly developed and taken or modified from existing open source programs
+Contains all matlab functions both newly developed and taken or modified from existing open source programs.
