@@ -12,7 +12,7 @@ Executes the mesh adaptive direct search (MADS) optimization for the two-step in
 
 'inputs' folder:
 Contains inputs files required to run the ATSUI method. Example of the input files can be downloaded here https://doi.org/10.5281/zenodo.1486392
-Note that due to the data confidentiality, the actual observed tsunami waveforms used in the above paper are replaced by artificial observations (inverted waveforms of the 1st step in the paper + random noise). Therefore, the final result will be different from that of the paper. All files must be extracted in the 'inputs' folder.
+All files must be extracted in the 'inputs' folder.
 
 'src' folder:
 Contains all matlab functions both newly developed and taken or modified from existing open source programs
