@@ -2,7 +2,7 @@ The codes are based on the Adaptive Tsunami SoUrce Inversion (ATSUI) method. The
 sea surface displacement inversion and slip inversion using 'run_optimization.m'. Details and theory of the ATSUI 
 method are described in the following paper:
 
-Mulia, I. E, Gusman, A. R., Hossen, M. J., Satake, K. 2018. Adaptive tsunami source inversion using an optimization and the reciprocity principle. Journal of Geophysical Research: Solid Earth. (in revision)
+Mulia, I. E., Gusman, A. R., Jakir Hossen, M., & Satake, K. (2018). Adaptive tsunami source inversion using optimizations and the reciprocity principle. Journal of Geophysical Research: Solid Earth, 123, 10,749–10,760. https://doi.org/10.1029/2018JB016439
    
 'run_source.m' file: 
 Computes Gaussian sources at the observation locations based on the reciprocity principle. 
