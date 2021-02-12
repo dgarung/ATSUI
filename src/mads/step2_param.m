@@ -27,10 +27,10 @@ minseg = fixed_par{1}(6);
 maxseg = fixed_par{1}(7);
 [dp idp rect] = quadtreeseg(opt_ssd,th,[minseg minseg],[maxseg maxseg]);
 id = find(rect>size(opt_ssd,1)-1); % remove points beyond source area
-[irem jrem] = ind2sub(size(rect),id);
-rect(irem,:) = []; % matrix coordinate of each generated-rectangle
-dp(irem) = []; % data points (equivalent to the obs. vector) used for the inversion 
-idp(irem) = []; % index of the data points based on number of grids inside the source area
+%[irem jrem] = ind2sub(size(rect),id);
+%rect(irem,:) = []; % matrix coordinate of each generated-rectangle
+%dp(irem) = []; % data points (equivalent to the obs. vector) used for the inversion 
+%idp(irem) = []; % index of the data points based on number of grids inside the source area
 
 %------Source area
 source_area = textscan(fopen('source_area.txt'),'%f %*[^\n]');
@@ -42,7 +42,8 @@ sa.m = 1+round( (sa.est - sa.wst)/grid.dx ); % Number of grids inside source are
 sa.n = 1+round( (sa.nth - sa.sth)/grid.dx ); % Number of grids inside source area (ydir)
 
 %------Selected points based on the quadtree decomposition
-[dlon,dlat] = meshgrid(sa.wst:grid.dx:sa.est,sa.sth:grid.dx:sa.nth);
+%[dlon,dlat] = meshgrid(sa.wst:grid.dx:sa.est,sa.sth:grid.dx:sa.nth);
+[dlon,dlat] = meshgrid(linspace(sa.wst,sa.est,sa.m),linspace(sa.sth,sa.nth,sa.n));
 dlon = dlon(idp);
 dlat = dlat(idp);
 dp_loc = [dlon dlat]; % coordinate of points resulted by the quadtree
